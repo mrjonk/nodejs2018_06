@@ -20,13 +20,13 @@ if (notes.getNotes) {
     console.log("il y a notes.getNotes");
 }*/
 
-let func = argv.add || argv.del;
+let func = argv.add?'add': argv.del?'del':'autre';
 switch (func) {
-    case add:
-        ajoute();
+    case 'add':
+        ajoute(argv.add);
         break;
-    case del:
-        supprime();
+    case 'del':
+        supprime(argv.del);
         break;
     default:
         break;
